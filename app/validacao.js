@@ -2,8 +2,19 @@
 function verificarValidação(chute){
     const numero = +chute
     if(chuteForInvalido(numero)){
+
+        if(chute.toUpperCase() === "GAME OVER"){
+            document.body.innerHTML = `
+            <h1>GAME OVER</h1>
+            <h3>MELHORE MUITO</h3>
+
+            <button id="jogar-novamente" class ="gameOver">Jogar novamente</button>
+            `
+            document.body.style.backgroundColor = "red";
+        }else{
         elementoChute.innerHTML +=' <div>Valor invalido</div>'
         return
+        }
     }
 
     if (numeroMaiorOuMenor(numero)){
