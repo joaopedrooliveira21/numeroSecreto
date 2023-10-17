@@ -6,6 +6,9 @@
     --primary-color: #F5F0BB;
     --second-color: #73A9AD;
     --third-color : #C4DFAA;
+    --game-over : #ED2B2A;
+    --game-over-dois: #F15A59;
+    --game-over-borda: #070A52;
   }
 
   body{
@@ -57,5 +60,22 @@
 
   .btnPlay:hover{
     background-color: var(--third-color);
+    cursor: pointer;
+  }
+
+  .gameOver{
+    border: 5px solid var(--game-over-borda);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 40px;
+    background: var(--game-over);
+    font-size: 4rem;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    color: var(--primary-color)
+  }
+
+  .gameOver:hover{
+    background-color: var(--game-over-dois);
     cursor: pointer;
   }
